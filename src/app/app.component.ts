@@ -38,5 +38,6 @@ export class AppComponent {
   }
   combleteTodo(index: number): void {
     this.todos[index].complet = !this.todos[index].complet;
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 }
